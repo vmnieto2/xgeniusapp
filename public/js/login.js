@@ -20,7 +20,7 @@ function login(){
         var form = new FormData();
         form.append("user",inputUser.value.toLowerCase());
         form.append("pass",inputPassword.value.toLowerCase());
-        fetch( "Login/Ingresar" , {
+        fetch( uriRoot+"Login/Ingresar" , {
             method : "post",
             body : form
         })
@@ -31,7 +31,6 @@ function login(){
 }
 
 function adminIngreso(data) {
-    console.log(data)
     if(data == 0){
         alert('Usuario o password errado');
     }
