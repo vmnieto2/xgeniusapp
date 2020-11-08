@@ -26,7 +26,7 @@ function login(){
             body : form
         })
             .then( r => r.json() )
-            .then( data => adminIngreso(data) )
+            .then( data => console.log(data) )
             .catch( e => console.error( "No se pudo conectar con el servidor" ) );
     }
 }

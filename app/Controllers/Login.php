@@ -101,8 +101,6 @@ class Login extends Controller
         $this->builder->join('empresas', 'empresa_id');
         $this->builder->join('cargos', 'cargo_id');
 
-        echo var_dump($user, $pass);die;
-
         $query = $this->builder->getWhere(['usuario_nick' => $user]);
         $query = $query->getResult()[0];
 

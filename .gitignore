@@ -43,7 +43,7 @@ $RECYCLE.BIN/
 # as it poses a security risk.
 
 # archivos victor git ignore
-env
+.env
 .vagrant
 Vagrantfile
 app/Config/App.php

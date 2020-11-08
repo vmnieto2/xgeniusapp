@@ -15,7 +15,7 @@ if ($script){
 </main>
         <footer class="footer mt-auto py-3 col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="container">
-                <span class="text-muted">Todos los derechos reservados a Interglobal Seguridad y Vigilancia Limitada.</span>
+                <span class="text-muted">Todos los derechos reservados a Victor Nieto.</span>
             </div>
         </footer>
 
