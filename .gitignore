@@ -41,13 +41,15 @@ $RECYCLE.BIN/
 #-------------------------
 # These should never be under version control,
 # as it poses a security risk.
-env
-.vagrant
-Vagrantfile
-app/Config/App.php
-Database.php
-index.php
-.htaccess
+
+# archivos victor git ignore
+#env
+#.vagrant
+#Vagrantfile
+#app/Config/App.php
+#Database.php
+#index.php
+#.htaccess
 
 #-------------------------
 # Temporary Files
