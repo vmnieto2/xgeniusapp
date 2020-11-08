@@ -31,6 +31,7 @@
     <script src="<?php echo Base_url() ?>/public/js/jquery-3.4.1.slim.min.js"></script>
     <script src="<?php echo Base_url() ?>/public/js/bootstrap.min.js"></script>
     <!-- Por esta vez cargo todos los scripts desde acá -->
+    <script src="<?php echo Base_url() ?>/public/js/menu.js"></script>
     <script src="<?php echo Base_url() ?>/public/js/login.js"></script>
 </body>
 </html>

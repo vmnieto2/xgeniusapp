@@ -21,7 +21,7 @@ function login(){
         var form = new FormData();
         form.append("user",inputUser.value.toLowerCase());
         form.append("pass",inputPassword.value.toLowerCase());
-        fetch( "Login/Ingresar" , {
+        fetch( uriRoot+"Login/Ingresar" , {
             method : "post",
             body : form
         })
@@ -42,7 +42,7 @@ function adminIngreso(data) {
         alert('Bienvenido '+ data);
         localStorage.setItem('usuario',inputUser.value.toLowerCase());
         localStorage.setItem('password',inputPassword.value.toLowerCase());
-        location.href = 'http://localhost/sunshine/Home';
+        location.href = 'http://localhost/xgeniusapp/Home';
     }
 }
 

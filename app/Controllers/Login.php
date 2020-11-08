@@ -10,7 +10,7 @@ class Login extends Controller
     function __construct()
     {
         $db      = \Config\Database::connect();
-        $this->builder = $db->table('usuarios u');
+        $this->builder = $db->table('usuarios');
     }
 
 
@@ -97,13 +97,15 @@ class Login extends Controller
         $user = $this->request->getVar('user');
         $pass = $this->request->getVar('pass');
 
-        //$this->builder->select('u.usuario_nick, u.usuario_password, u.usuario_estado, u.usuario_id, e.cedula, e.primer_nombre, e.primer_apellido, e.correo, e.empresa_id, ep.empresa_nombre, cg.cargo_id');
         $this->builder->join('empleados', 'empleado_id');
         $this->builder->join('empresas', 'empresa_id');
         $this->builder->join('cargos', 'cargo_id');
 
+        echo var_dump($user, $pass);die;
+
         $query = $this->builder->getWhere(['usuario_nick' => $user]);
         $query = $query->getResult()[0];
+
         $validar = password_verify($pass, $query->usuario_password);
         if($validar){
             if($query->usuario_estado == 0){
@@ -121,10 +123,6 @@ class Login extends Controller
         }else{
             echo json_encode(0);
         }
-        /*$opciones = [
-            'cost' => 12,
-        ];*/
-        //$usrPass =  password_hash($pass, PASSWORD_BCRYPT, $opciones)."\n";
     }
 
     public function salir(){

@@ -1,4 +1,4 @@
-var uriRoot = "http://localhost/sunshine/";
+var uriRoot = "http://localhost/xgeniusapp/";
 var url = window.location.href;
 url = url.split('/');
 var id = url[6];
@@ -19,6 +19,6 @@ function salir(){
 
 function adminSalir(data){
     if(data){
-        location.href = 'http://localhost/sunshine';
+        location.href = 'http://localhost/xgeniusapp';
     }
 }
