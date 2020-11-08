@@ -7,7 +7,6 @@ window.onload = ()=>{
     }
     inputUser.focus();
     btnIngresar.addEventListener('click',login);
-    //salir.addEventListener('click',alert('saliendo'));
 }
 
 function login(){
@@ -21,17 +20,18 @@ function login(){
         var form = new FormData();
         form.append("user",inputUser.value.toLowerCase());
         form.append("pass",inputPassword.value.toLowerCase());
-        fetch( uriRoot+"Login/Ingresar" , {
+        fetch( "Login/Ingresar" , {
             method : "post",
             body : form
         })
             .then( r => r.json() )
-            .then( data => console.log(data) )
+            .then( data => adminIngreso(data) )
             .catch( e => console.error( "No se pudo conectar con el servidor" ) );
     }
 }
 
 function adminIngreso(data) {
+    console.log(data)
     if(data == 0){
         alert('Usuario o password errado');
     }

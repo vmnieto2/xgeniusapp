@@ -11,6 +11,7 @@ class Login extends Controller
     {
         $db      = \Config\Database::connect();
         $this->builder = $db->table('usuarios');
+        $this->builderEmpleados = $db->table('empleados');
     }
 
 
@@ -98,9 +99,6 @@ class Login extends Controller
         $pass = $this->request->getVar('pass');
 
         $this->builder->join('empleados', 'empleado_id');
-        $this->builder->join('empresas', 'empresa_id');
-        $this->builder->join('cargos', 'cargo_id');
-
         $query = $this->builder->getWhere(['usuario_nick' => $user]);
         $query = $query->getResult()[0];
 
